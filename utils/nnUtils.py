@@ -19,9 +19,10 @@ def manual_seed(seed: int = 1) -> None:
     torch.manual_seed(seed)
     torch.cuda.manual_seed(seed)
     torch.cuda.manual_seed_all(seed)
-    if torch.cuda.CUDA_ENABLED and use_deterministic_cudnn:
-        torch.backends.cudnn.deterministic = True
-        torch.backends.cudnn.benchmark = False
+    # if torch.cuda.CUDA_ENABLED and use_deterministic_cudnn:
+    # if use_deterministic_cudnn:
+    #     torch.backends.cudnn.deterministic = True
+    #     torch.backends.cudnn.benchmark = False
 
 
 

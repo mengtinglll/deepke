@@ -1,9 +1,10 @@
 seed: 1
 
-use_gpu: True
+#use_gpu: True
+use_gpu: False
 gpu_id: 0
 
-epoch: 50
+epoch: 15
 batch_size: 32
 learning_rate: 3e-4
 lr_factor: 0.7 # 学习率的衰减率
@@ -14,7 +15,7 @@ early_stopping_patience: 6
 
 train_log: True
 log_interval: 10
-show_plot: True
+show_plot: False
 only_comparison_plot: False
 plot_utils: matplot  # [matplot, tensorboard]
 

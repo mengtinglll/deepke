@@ -54,7 +54,7 @@ class PRMetric():
 
         self.y_true = np.append(self.y_true, y_true)
         self.y_pred = np.append(self.y_pred, y_pred)
-
+    # y_pred 是预测的结果 y_true 是他实际的label
     def compute(self):
         p, r, f1, _ = precision_recall_fscore_support(self.y_true, self.y_pred, average='macro', warn_for=tuple())
         _, _, acc, _ = precision_recall_fscore_support(self.y_true, self.y_pred, average='micro', warn_for=tuple())

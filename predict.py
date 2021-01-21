@@ -71,7 +71,7 @@ def _get_predict_instance(cfg):
 
 
 # 自定义模型存储的路径
-fp = 'xxx/checkpoints/2019-12-03_17-35-30/cnn_epoch21.pth'
+fp = 'C:\\Users\\lmt19\\PycharmProjects\\deepke\\checkpoints\\2021-01-09_18-08-51\\transformer_epoch31.pth'
 
 
 @hydra.main(config_path='conf/config.yaml')

@@ -51,7 +51,8 @@ def _serialize_sentence(data: List[Dict], serial, cfg):
     for d in data:
         sent = d['sentence'].strip()
         sent = sent.replace(d['head'], ' head ', 1).replace(d['tail'], ' tail ', 1)
-        d['tokens'] = serial(sent, never_split=['head', 'tail'])
+        d['tokens'] = serial(sent, never_split=['head', 'sent'])
+        print(d['tokens'])
         head_idx, tail_idx = d['tokens'].index('head'), d['tokens'].index('tail')
         d['head_idx'], d['tail_idx'] = head_idx, tail_idx
 
